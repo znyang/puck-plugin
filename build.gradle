@@ -1,0 +1,43 @@
+buildscript {
+    repositories {
+        if (System.getenv('ENV_CI')) {
+            jcenter()
+        } else {
+            maven {
+                url 'http://maven.aliyun.com/nexus/content/groups/public/'
+            }
+            jcenter()
+        }
+        maven { url "https://jitpack.io" }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.2.2'
+    }
+}
+
+allprojects {
+    ext {
+        isEnvCi = System.getenv('ENV_CI')
+        BUILD_TOOLS_VERSION = isEnvCi ? "22.0.1" : "25.0.0"
+    }
+    repositories {
+        if (isEnvCi) {
+            jcenter()
+        } else {
+            maven {
+                url 'http://maven.aliyun.com/nexus/content/groups/public/'
+            }
+            jcenter()
+        }
+        maven { url "https://jitpack.io" }
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.1'
+    distributionUrl = 'http://services.gradle.org/distributions/gradle-3.1-all.zip'
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

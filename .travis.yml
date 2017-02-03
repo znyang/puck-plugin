@@ -1,0 +1,14 @@
+language: java
+jdk:
+  - oraclejdk8
+
+before_install:
+  - chmod +x gradlew
+  - export JAVA8_HOME=/usr/lib/jvm/java-8-oracle
+  - export JAVA_HOME=$JAVA8_HOME
+  - export ENV_CI=true
+
+script: ./gradlew clean build --info --stacktrace
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
