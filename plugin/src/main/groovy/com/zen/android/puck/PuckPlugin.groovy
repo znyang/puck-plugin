@@ -22,7 +22,7 @@ public class PuckPlugin implements Plugin<Project> {
             project.pluginManager.apply('jacoco')
         }
         project.dependencies {
-            testCompile "$GROUP:core:$VERSION"
+            testCompile "$GROUP:puck:$VERSION"
         }
 
         project.afterEvaluate {
