@@ -38,7 +38,7 @@ dependencies {
 import org.apache.tools.ant.filters.ReplaceTokens
 
 task generateVersionClass(type: Copy) {
-    def puckVersion = '0.1-beta5'
+    def puckVersion = '0.1'
     from 'src/main/templates/Version.java'
     into "${buildDir}/gen/main/java/com/zen/android/puck"
     filter(ReplaceTokens, tokens: [version: puckVersion])
