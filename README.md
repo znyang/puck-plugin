@@ -19,7 +19,7 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.2.2'
-        classpath 'com.github.znyang:puck-plugin:0.1-beta5'
+        classpath 'com.github.znyang:puck-plugin:0.1-beta8'
         // ...
     }
 }
