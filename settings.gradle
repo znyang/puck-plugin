@@ -1,1 +1,2 @@
+include ':puck-sample'
 include 'plugin'
