@@ -23,11 +23,12 @@ buildscript {
         // ...
     }
 }
+```
 
-// or specify project
-allprojects {
-    apply plugin: 'com.zen.android.puck'
-}
+```gradle
+
+// android module build.gradle
+apply plugin: 'com.zen.android.puck'
 
 ```
 
