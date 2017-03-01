@@ -55,7 +55,7 @@ public class PuckPlugin implements Plugin<Project> {
             copyAssets.mustRunAfter(variant.assemble)
 
             def testUnitTask = project.tasks.findByName("test${slug}UnitTest")
-            testUnitTask?.dependsOn(copyAssets)
+//            testUnitTask?.dependsOn(copyAssets)
 
             def jacoco = project.tasks.create("jacocoReprot${slug}", JacocoReportTask)
             jacoco.group = 'reporting'
