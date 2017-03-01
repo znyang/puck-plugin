@@ -19,7 +19,7 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.2.2'
-        classpath 'com.github.znyang:puck-plugin:0.1-beta8'
+        classpath 'com.github.znyang:puck-plugin:0.1'
         // ...
     }
 }
@@ -44,7 +44,7 @@ apply plugin: 'com.zen.android.puck'
 ### Robolectric
 
 * [解决AndroidManifest.xml文件找不到的问题](/doc/android-manifest-not-found.md)
-* 解决当前项目的依赖库中的assets文件找不到的问题(copyAssetsTask)
+* 解决当前项目的依赖库中的assets文件找不到的问题(使用copyXXXAssetsFile Task)
 
 ### RxJava & RxAndroid
 
